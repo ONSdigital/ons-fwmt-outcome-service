@@ -46,10 +46,6 @@ public class OutcomePreprocessingQueueConfig {
   @Value("${app.rabbitmq.rm.prefetchCount}")
   private int prefetchCount;
 
-
-
-
-
   // Listener Adapter
   @Bean
   @Qualifier("OS_L")

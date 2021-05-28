@@ -15,7 +15,7 @@ import uk.gov.ons.census.fwmt.common.retry.GatewayMessageRecover;
 import uk.gov.ons.census.fwmt.common.retry.GatewayRetryPolicy;
 
 @Configuration
-public class RabbitMqConfig {
+public class RabbitMqConfigMain {
   private final String username;
   private final String password;
   private final String hostname;
@@ -29,7 +29,7 @@ public class RabbitMqConfig {
 
   private final String rmFieldQueue;
 
-  public RabbitMqConfig(
+  public RabbitMqConfigMain(
       @Value("${app.rabbitmq.rm.username}") String username,
       @Value("${app.rabbitmq.rm.password}") String password,
       @Value("${app.rabbitmq.rm.host}") String hostname,

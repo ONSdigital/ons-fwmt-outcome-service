@@ -12,6 +12,10 @@ import uk.gov.ons.census.fwmt.common.data.shared.FulfilmentRequest;
 import uk.gov.ons.census.fwmt.common.data.spg.SPGNewStandaloneAddress;
 import uk.gov.ons.census.fwmt.common.data.spg.SPGNewUnitAddress;
 import uk.gov.ons.census.fwmt.common.data.spg.SPGOutcome;
+import uk.gov.ons.census.fwmt.common.dto.CareCodeDto;
+import uk.gov.ons.census.fwmt.common.dto.CeDetailsDto;
+import uk.gov.ons.census.fwmt.common.dto.FulfilmentRequestDto;
+import uk.gov.ons.census.fwmt.common.dto.OutcomeSuperSetDto;
 
 @Component
 public class OutcomeDtoMapper extends ConfigurableMapper {

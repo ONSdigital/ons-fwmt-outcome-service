@@ -3,19 +3,18 @@ package uk.gov.ons.census.fwmt.outcomeservice.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import uk.gov.ons.census.fwmt.common.dto.OutcomeSuperSetDto;
 import uk.gov.ons.census.fwmt.common.error.GatewayException;
+import uk.gov.ons.census.fwmt.common.service.OutcomeServiceProcessor;
 import uk.gov.ons.census.fwmt.events.component.GatewayEventManager;
-import uk.gov.ons.census.fwmt.outcomeservice.converter.OutcomeServiceProcessor;
-import uk.gov.ons.census.fwmt.outcomeservice.converter.OutcomeLookup;
-import uk.gov.ons.census.fwmt.outcomeservice.dto.OutcomeSuperSetDto;
 import uk.gov.ons.census.fwmt.outcomeservice.service.OutcomeService;
+import uk.gov.ons.census.fwmt.outcomeservice.utility.OutcomeLookup;
 
 import java.util.Arrays;
 import java.util.Map;
 import java.util.UUID;
 
 import javax.transaction.Transactional;
-
 
 @Slf4j
 @Service

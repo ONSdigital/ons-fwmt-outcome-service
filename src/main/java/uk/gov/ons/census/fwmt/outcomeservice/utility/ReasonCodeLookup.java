@@ -1,4 +1,4 @@
-package uk.gov.ons.census.fwmt.outcomeservice.converter;
+package uk.gov.ons.census.fwmt.outcomeservice.utility;
 
 import java.util.HashMap;
 import java.util.Map;
