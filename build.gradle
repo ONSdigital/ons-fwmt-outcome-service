@@ -94,7 +94,7 @@ dependencies {
 	compile('uk.gov.ons.census.fwmt:census-fwmt-common:2.0.2-SNAPSHOT')
 	compile('uk.gov.ons.ctp.integration.common:product-reference:1.0.14')
     compile("uk.gov.ons.census.ffa:census-ffa-storage-utils:0.0.4-RELEASE")
-    compile('uk.gov.ons.ons.fwmt:ons-fwmt-outcome-test:0.0.2-SNAPSHOT')
+    compile('uk.gov.ons.ons.fwmt:ons-fwmt-outcome-test:0.0.1-SNAPSHOT')
 
     compile("javax.activation:activation:1.1.1")
 
