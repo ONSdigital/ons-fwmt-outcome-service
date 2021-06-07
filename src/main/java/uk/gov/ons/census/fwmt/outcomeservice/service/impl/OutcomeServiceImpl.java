@@ -8,12 +8,14 @@ import uk.gov.ons.census.fwmt.common.error.GatewayException;
 import uk.gov.ons.census.fwmt.common.service.OutcomeServiceProcessor;
 import uk.gov.ons.census.fwmt.events.component.GatewayEventManager;
 import uk.gov.ons.census.fwmt.outcomeservice.service.OutcomeService;
-import uk.gov.ons.census.fwmt.outcomeservice.utility.OutcomeLookup;
+import uk.gov.ons.census.fwmt.outcomeservice.utility.OutcomeDefaultLookup;
 
 import java.util.Arrays;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 
+import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
 @Slf4j
@@ -38,11 +40,21 @@ public class OutcomeServiceImpl implements OutcomeService {
   private Map<String, OutcomeServiceProcessor> outcomeServiceProcessors;
 
   @Autowired
-  private OutcomeLookup outcomeLookup;
+  private OutcomeDefaultLookup outcomeLookup;
 
   @Autowired
   private GatewayEventManager gatewayEventManager;
 
+  
+  @PostConstruct
+  public void listProcessors() {
+	  Set<String> keySet = outcomeServiceProcessors.keySet();
+	  for (String key : keySet) {
+		  System.out.println(key);		
+	}
+  }
+  
+  
   @Override
   @Transactional
   public void createSpgOutcomeEvent(OutcomeSuperSetDto outcome) throws GatewayException {

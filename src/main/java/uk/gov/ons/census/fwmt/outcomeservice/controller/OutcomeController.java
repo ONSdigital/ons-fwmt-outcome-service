@@ -20,7 +20,7 @@ import uk.gov.ons.census.fwmt.common.data.spg.SPGOutcome;
 import uk.gov.ons.census.fwmt.common.error.GatewayException;
 import uk.gov.ons.census.fwmt.events.component.GatewayEventManager;
 import uk.gov.ons.census.fwmt.outcomeservice.message.OutcomePreprocessingProducer;
-import uk.gov.ons.census.fwmt.outcomeservice.service.impl.SwitchCaseIdService;
+import uk.gov.ons.census.fwmt.outcomeservice.service.impl.SwitchCaseIdDefaultService;
 
 import java.util.UUID;
 
@@ -48,7 +48,7 @@ public class OutcomeController implements OutcomeApi {
   private OutcomePreprocessingProducer outcomePreprocessingProducer;
 
   @Autowired
-  private SwitchCaseIdService switchCaseIdService;
+  private SwitchCaseIdDefaultService switchCaseIdService;
 
   @Override
   public ResponseEntity<Void> ceOutcomeResponse(String caseId, CEOutcome ceOutcome) {

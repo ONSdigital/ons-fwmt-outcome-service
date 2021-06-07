@@ -18,7 +18,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @Entity
 @Table(name = "gateway_cache")
-public class GatewayCache {
+public class GatewayDefaultCache {
   @Id
   @Column(name = "case_id", unique = true, nullable = false)
   public String caseId;

@@ -6,15 +6,15 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Lock;
 import org.springframework.stereotype.Repository;
 
-import uk.gov.ons.census.fwmt.outcomeservice.data.GatewayCache;
+import uk.gov.ons.census.fwmt.outcomeservice.data.GatewayDefaultCache;
 
 @Repository
-public interface GatewayCacheRepository extends JpaRepository<GatewayCache, Long> {
+public interface GatewayCacheDefaultRepository extends JpaRepository<GatewayDefaultCache, Long> {
 
   @Lock(LockModeType.PESSIMISTIC_WRITE)
-  GatewayCache findByCaseId(String caseId);
+  GatewayDefaultCache findByCaseId(String caseId);
 
   @Lock(LockModeType.PESSIMISTIC_WRITE)
-  GatewayCache findByOriginalCaseId(String caseId);
+  GatewayDefaultCache findByOriginalCaseId(String caseId);
 
 }

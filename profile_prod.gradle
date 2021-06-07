@@ -1,0 +1,3 @@
+dependencies {
+ compile('uk.gov.ons.ons.fwmt:ons-fwmt-outcome-test:0.0.2-SNAPSHOT')
+}

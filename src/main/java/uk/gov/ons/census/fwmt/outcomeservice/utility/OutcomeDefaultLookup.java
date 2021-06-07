@@ -3,7 +3,10 @@ package uk.gov.ons.census.fwmt.outcomeservice.utility;
 import java.util.HashMap;
 import java.util.Map;
 
-public class OutcomeLookup {
+import org.springframework.stereotype.Component;
+
+@Component
+public class OutcomeDefaultLookup {
 
   private final Map<String, String[]> outcomeCodeMap = new HashMap<>();
 

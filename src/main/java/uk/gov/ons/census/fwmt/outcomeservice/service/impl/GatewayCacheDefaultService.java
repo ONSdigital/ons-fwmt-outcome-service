@@ -1,10 +1,11 @@
 package uk.gov.ons.census.fwmt.outcomeservice.service.impl;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import uk.gov.ons.census.fwmt.outcomeservice.data.GatewayCache;
-import uk.gov.ons.census.fwmt.outcomeservice.repository.GatewayCacheRepository;
+
+import lombok.extern.slf4j.Slf4j;
+import uk.gov.ons.census.fwmt.outcomeservice.data.GatewayDefaultCache;
+import uk.gov.ons.census.fwmt.outcomeservice.repository.GatewayCacheDefaultRepository;
 
 /**
  * This class is bare-bones because it's a simple connector between the rest of the code and the caching implementation
@@ -14,20 +15,20 @@ import uk.gov.ons.census.fwmt.outcomeservice.repository.GatewayCacheRepository;
 
 @Slf4j
 @Service
-public class GatewayCacheService {
+public class GatewayCacheDefaultService {
 
   @Autowired
-  private GatewayCacheRepository repository;
+  private GatewayCacheDefaultRepository repository;
 
-  public GatewayCache getById(String caseId) {
+  public GatewayDefaultCache getById(String caseId) {
     return repository.findByCaseId(caseId);
   }
 
-  public GatewayCache getByOriginalId(String caseId) {
+  public GatewayDefaultCache getByOriginalId(String caseId) {
     return repository.findByOriginalCaseId(caseId);
   }
 
-  public void save(GatewayCache cache) {
+  public void save(GatewayDefaultCache cache) {
     repository.save(cache);
   }
 
